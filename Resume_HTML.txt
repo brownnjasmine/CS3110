@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resume Test</title>
+    <link href='https://fonts.googleapis.com/css?family=Amiko' rel='stylesheet'>
+<style>
+    body {
+        background-color: #caa8f5ff;
+        font-family: 'Amiko';
+    }
+    h1, h2{
+        margin: auto;
+        margin-bottom: 15px;
+        text-align: center;
+        color: #230c33ff;
+    }
+    
+    h3{
+        margin: auto;
+        margin-top: 15px;
+    }
+    b, i, a, p {
+        display: inline;
+    }
+    
+    hr {
+        margin: auto;
+        border: 3px solid;
+        border-color:#b27c66ff;
+        border-radius: 10px;
+    }
+    
+    .links{
+        margin: auto;
+        text-align: center;
+    }
+    
+    .links a{
+        margin: 5%;
+    }
+</style>
+
+</head>
+
+<body>
+    <h1>Resume Test</h1>
+    <div id="Contact_Info">
+        <h1>Jasmine Brown</h1>
+        <div class="links">
+            <a href="mailto:email">jbrown25@uccs.edu</a> 
+            <a href="tel:719-359-3738">719-359-3738</a>
+            <a href="www.linkedin.com/in/jasmine-brown-1a5a5625b">LinkedIn Profile</a>
+        </div>
+        
+    </div>
+    <div id="Objective">
+        <h2>Personal Objective</h2>
+        <p>College junior seeking position as a front-end or full-stack developer to deepen my experience in the software development field and hone my technical skills. Interested in accessibility within software development.</p>
+    </div>
+    <div id="Education">
+        <h3>Education</h3>
+        <hr>
+        <b>University of Colorado, Colorado Springs</b>
+        <p>Colorado Springs, CO</p>
+        <i>August 2020 - Present</i>
+        <b><i>Bachelor of Science Degree in Computer Science</i></b>
+        <b><i>Expected Graduation Date:</i></b> <p>May 2024</p>
+        <b><i>Relevant Courses:</i></b>
+        <p>Data Structures and Algorithms, Discrete Mathmematics, Linear Algebra, Computer Architecture, Technical Writing, Engineering Design, Production Applications for the Workforce</p>
+        <b>Pine Creek High School</b>
+        <p>Colorado Springs, CO</p>
+        <i>August 2016 - May 2020</i>
+    </div>
+    <div id="Skills">
+        <h3>Skills</h3>
+        <hr>
+        <b><i>Languages:</i></b>
+        <p>Java, C++, C#, C, HTML/CSS, Bash, Python, R</p>
+        <b><i>Environments:</i></b>
+        <p>Unix CLI, Visual Studio, VS Code, Eclipse, RStudio, Processing, SolidWorks, Office365 Suite, Adobe Suite, Windows, MacOS, Wix, Drupal, Wordpress</p>
+        <b><i>Soft Skills:</i></b>
+        <p>AGILE, Waterfall, 3D Modeling, Hardowrking, Creative, Team-player, Diligent, Organized, Reliable</p>
+    </div>
+    <div id="Work_Experience">
+        <h3>Work Experience</h3>
+        <hr>
+        <b>Eclypses</b>
+        <i>Summer 2019</i>
+        <i>2005 Aeroplaza Dr, Colorado Springs, CO 80916</i>
+        <ul>
+            <li>Create a secure site to host an interactive video feed of a robotic arm</li>
+            <li>Learned HTML/CSS independently</li>
+            <li>Developed and designed a website</li>
+            <li>Earned a certificate to certify knowledge in cybersecurity</li>
+        </ul>
+        
+        <b>Assistive Technology Assistant</b>
+        <i>August 2021 - Present</i>
+        <i>1420 Austin Bluffs Pkwy, Colorado Springs, CO 80918</i>
+        <ul>
+            <li>Distribute and manage assistive technology equipment to students</li>
+            <li>Teach students with disabilities how to use assistive equipment</li>
+            <li>Manage and update computers for the assistive technology lab and the disability services office</li>
+        </ul>
+        
+        <b>Gateway Program Seminar TA/Peer Leader</b>
+        <i>August 2022 - December 2022</i>
+        <i>1420 Austin Bluffs Pkwy, Colorado Springs, CO 80918</i>
+        <ul>
+            <li>Taught students about various technology that they can use throughout their college career</li>
+            <li>Led class instruction/activites about basic technological skills</li>
+            <li>Helped incoming students become adjusted to college life</li>
+        </ul>
+        
+    </div>
+    <div id="Projects">
+        <h3>Projects</h3>
+        <hr>
+        <b><i>Website Design for Assistive Technology Lab</i></b>
+        <p>Assistive Technology Assistant, UCCS</p>
+        <p>Built new pages for the UCCS website using Drupal to showcase the services that the Assistive Technology team offers</p>
+        
+        <b><i>Ideology Website Design</i></b>
+        <p>Director</p>
+        <p>Created a visual presentation using Wix to present a team-created new ideology</p>
+    </div>
+  
+</body>
+
+</html>
+
+
+/* CSS HEX */
+--mauve: #caa8f5ff;
+--middle-blue-purple: #9984d4ff;
+--ksu-purple: #592e83ff;
+--dark-purple: #230c33ff;
+--blast-off-bronze: #b27c66ff;
+
+/* CSS HSL */
+--mauve: hsla(266, 79%, 81%, 1);
+--middle-blue-purple: hsla(256, 48%, 67%, 1);
+--ksu-purple: hsla(270, 48%, 35%, 1);
+--dark-purple: hsla(275, 62%, 12%, 1);
+--blast-off-bronze: hsla(17, 33%, 55%, 1);
+
+/* SCSS HEX */
+$mauve: #caa8f5ff; //background
+$middle-blue-purple: #9984d4ff; //darker background
+$ksu-purple: #592e83ff; //even darker background
+$dark-purple: #230c33ff; //text
+$blast-off-bronze: #b27c66ff; //accent color
+
+/* SCSS HSL */
+$mauve: hsla(266, 79%, 81%, 1);
+$middle-blue-purple: hsla(256, 48%, 67%, 1);
+$ksu-purple: hsla(270, 48%, 35%, 1);
+$dark-purple: hsla(275, 62%, 12%, 1);
+$blast-off-bronze: hsla(17, 33%, 55%, 1);
+
+/* SCSS RGB */
+$mauve: rgba(202, 168, 245, 1);
+$middle-blue-purple: rgba(153, 132, 212, 1);
+$ksu-purple: rgba(89, 46, 131, 1);
+$dark-purple: rgba(35, 12, 51, 1);
+$blast-off-bronze: rgba(178, 124, 102, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-right: linear-gradient(90deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-bottom: linear-gradient(180deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-left: linear-gradient(270deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-top-right: linear-gradient(45deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-bottom-right: linear-gradient(135deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-top-left: linear-gradient(225deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-bottom-left: linear-gradient(315deg, #caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
+$gradient-radial: radial-gradient(#caa8f5ff, #9984d4ff, #592e83ff, #230c33ff, #b27c66ff);
