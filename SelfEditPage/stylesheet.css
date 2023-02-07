@@ -1,0 +1,14 @@
+img{
+    display:block;
+    position: absolute;
+}
+
+.Organized_Selector{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr [col-start]);
+    grid-template-rows: repeat(3, 100px [row-start]);
+}
+
+img .Cat {
+    display:inline;
+}
