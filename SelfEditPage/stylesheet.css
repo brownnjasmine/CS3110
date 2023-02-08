@@ -1,14 +1,21 @@
-img{
-    display:block;
-    position: absolute;
-}
 
+.Back_Picture{
+    width:fit-content;
+    max-width: 100%;
+    height: auto;
+    z-index: -5;
+}
 .Organized_Selector{
     display:grid;
     grid-template-columns: repeat(3, 1fr [col-start]);
-    grid-template-rows: repeat(3, 100px [row-start]);
+    grid-template-rows: repeat(2, 50px [row-start]);
+    align-items: center;
+    justify-items: center;
+    column-gap: 10px;
+    row-gap: 10px;
 }
 
-img .Cat {
-    display:inline;
+img.Cat {
+    width: 3rem;
+    height: auto;
 }
