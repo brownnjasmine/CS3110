@@ -1,21 +1,122 @@
 
-.Back_Picture{
-    width:fit-content;
-    max-width: 100%;
-    height: auto;
-    z-index: -5;
+body{
+    background-image: url("Cat_Sprites/sysimg_goods_wall.png");
+    background-repeat: repeat;
+    
+    font-family: "Titan One", sans-serif;
+    color:antiquewhite;
 }
-.Organized_Selector{
-    display:grid;
-    grid-template-columns: repeat(3, 1fr [col-start]);
-    grid-template-rows: repeat(2, 50px [row-start]);
-    align-items: center;
-    justify-items: center;
-    column-gap: 10px;
-    row-gap: 10px;
+h1{
+    text-align: center;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: rgb(25, 1, 1);
+    background-image: url("Cat_Sprites/sysimg_takara_wall.png");
+    border-radius: 15px;
 }
 
-img.Cat {
-    width: 3rem;
+p{
+    text-align: center;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: rgb(25, 1, 1);
+}
+body{
+    position:relative;
+    width:auto;
+    height:auto;
+    z-index: -7;
+}
+#Playground{
+    position:relative;
+    width: 1527px;
+    height: 1024px;
+    margin: auto;
+    z-index: -6;
+
+}
+.Back_Picture{
+    width: auto;
     height: auto;
+    z-index: -2;
+    text-align: center;
+    border: 5px;
+    border-color: rgb(25, 1, 1);
+    border-style:dotted;
+    border-radius: 15px;
+}
+
+
+img.Cat {
+    width: 80px;
+    height: 60px;
+}
+
+#Guy_Furry.Cat{
+    width: 80px;
+    height: auto;
+}
+
+.Cats{
+    height:64px;
+    width: 600px;
+
+    border:2px;
+    border-color:crimson;
+    border-style: dashed;
+    border-top:0;
+    border-left:0;
+}
+
+.Destinations{
+position: absolute;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+.Destination{
+    position: absolute;
+    display: flex;
+    background-color: rgba(65, 65, 65, 0.336);
+    z-index: 1;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    flex-wrap:wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.hover-over{
+    background-color: rgba(236, 82, 31, 0.74);
+}
+
+#Porch{
+    left: 50%;
+    bottom: 26%;
+    
+}
+
+#Carpet{
+    left: 15%;
+    bottom: 15%;
+}
+
+#Stump{
+    left: 77%;
+    bottom: 43%;
+}
+
+#Rock{
+    left:89%;
+    bottom: 3%;
+}
+
+#OutCarpet{
+    left: 72%;
+    bottom: 18%;
+}
+
+#CatStand{
+    left:35%;
+    bottom: 40%;
 }

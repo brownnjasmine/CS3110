@@ -3,26 +3,35 @@
     <head>
         <title>Cat Time!</title>
         <link href="stylesheet.css" rel="stylesheet">
-        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titan+One">
     </head>
     <body>
         <h1>Welcome to Cat Time!</h1>
+        <p>Have some fun with cat friends! Click the cats and move them around the playground!</p>
         <div id="Playground">
-            <img src="Cat_Sprites/background.png" class= "Back_Picture" alt="Drawn picture of a backyard and porch.">
-        </div>
-        <div id="Cat_Box">
-            <!--This is where you can select cats and put them on the playground. click and drag?-->
-            <div class="Organized_Selector">
-                <!--All images of cats (Testing for now)-->
-                <img src="Cat_Sprites/Bandit_Test.png" class="Cat" alt = "Orange and Gray Cat">
-                <img src="Cat_Sprites/Callie_Test.png" class="Cat" alt="Calico Cat">
-                <img src="Cat_Sprites/Marshmello_Test.png" class="Cat" alt="White and Gray Cat">
-                <img src="Cat_Sprites/Peaches_Test.png" class="Cat" alt="Two-toned orange cat">
-                <img src="Cat_Sprites/Pumpkin_Test.png" class="Cat" alt="Orange and white cat">
-                <img src="Cat_Sprites/Socks_Test.png" class="Cat" alt="Black and white cat">
-            </div>
-        </div>
+            
 
+            <div class = "Destinations">
+                <img src="Cat_Sprites/background.png" class= "Back_Picture" alt="Drawn picture of a backyard and porch.">
+                <div id="Porch" class="Destination"></div>
+                <div id="Carpet" class="Destination"></div>
+                <div id="Stump" class="Destination"></div>
+                <div id="Rock" class="Destination"></div>
+                <div id="OutCarpet" class="Destination"></div>
+                <div id="CatStand" class="Destination"></div>
+            </div>
+            
+            <div class = "Cats">
+                <img id="Bandit" src="Cat_Sprites/Bandit_Test.png" class="Cat" draggable="true" alt = "Orange and Gray Cat">
+                <img id="Callie "src="Cat_Sprites/Callie_Test.png" class="Cat" draggable="true" alt="Calico Cat">
+                <img id="Marshmello" src="Cat_Sprites/Marshmello_Test.png" class="Cat" draggable="true" alt="White and Gray Cat">
+                <img id="Peaches" src="Cat_Sprites/Peaches_Test.png" class="Cat" draggable="true" alt="Two-toned orange cat">
+                <img id="Pumpkin" src="Cat_Sprites/Pumpkin_Test.png" class="Cat" draggable="true" alt="Orange and white cat">
+                <img id="Socks" src="Cat_Sprites/Socks_Test.png" class="Cat" draggable="true" alt="Black and white cat">
+            </div>
+            
+        </div>
+        <button>owo what's this?</button>
         <script src="interaction.js"></script>
     </body>
 </html>
