@@ -1,0 +1,93 @@
+body{
+    font-family:'Rubik', sans-serif;
+    font-weight:600;
+    font-size: xx-large;
+    background-image: url("just-waves.png");
+    background-repeat:repeat;
+    color: #aec580;
+    -webkit-text-stroke: 1px #3c566e;
+}
+
+
+h1, h2 {
+    text-align: center;
+}
+
+h1{
+    background-size: auto;
+
+    padding-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+
+}
+
+/* Referenced shubham715's wave border here: https://codepen.io/shubham715/pen/oqbPGq  */
+.wave::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 10px;
+    background-size: 20px 20px;
+    background-image:
+     radial-gradient(circle at 10px -5px, transparent 12px, #ffffff 13px);
+  }
+  .wave::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-repeat: repeat;
+    height: 15px;
+    background-size: 40px 20px;
+    background-image:
+      radial-gradient(circle at 10px 15px, #ffffff 12px, transparent 13px);
+  }
+
+.wave{
+    position: relative;
+    background: linear-gradient(-90deg, #bde6bd7e, #3db8a885);
+    border-radius: 5px;
+}
+
+
+
+ p {
+    margin: 0%;
+ }
+
+ a{
+    margin: 1rem;
+    text-decoration: none;
+    -webkit-text-stroke: 1px #3c566e;
+ }
+
+ a:hover{
+    color:#8bcf8b;
+ }
+
+ a:visited{
+    color:#aec580;
+ }
+
+ img{
+    width: 50%;
+    display:block;
+    margin-right: auto;
+    margin-left: auto;
+
+    border-radius: 10px;
+    border:5px #3c566e;
+    border-style: groove;
+ }
+
+#NavBar{
+    background-image: linear-gradient(90deg,#bde6bd, #3db8a7);
+    box-shadow: 10px 5px #3c566e;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
