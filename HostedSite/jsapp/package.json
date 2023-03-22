@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "node-fetch": "^3.3.0",
     "restify": "^11.1.0"
   }
 }

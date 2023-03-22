@@ -1,6 +1,7 @@
 <!DOCTYPE html>
+<html>
 <head>
-	<title>here's som form!</title>
+	<title>here's some form!</title>
 	<link rel="stylesheet" href="stylesheet.css">
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap" rel="stylesheet">
 </head>
@@ -14,18 +15,48 @@
 
 	<div>
 		<p>hello hi come look at these http requests</p>
-		<img src="duck_camera.png" alt="duck looking at camera"/>
+		<img src="duck_camera.png" alt="duck looking at camera" style="width: 20%; height: auto;"/>
 		<p>GET Endpoint</p>
 		<form method="GET" action="/api">
                         <input type="submit"/>
                 </form>
 
 		<p>POST Endpoint</p>
-		<form method="POST" action="/api">
-			<label>duck name:<input name="Duck name"/></label>
-			<label>duck comment:<input name="Duck comment"/></label>
+		<form id="postDuck" method="POST" action="/api">
+			<label>duck name:<input name="DuckName"/></label>
+			<label>duck comment:<input name="DuckComment"/></label>
 			<input type="submit"/>
+		</form>
+		
+		<p>PUT Endpoint</p>
+		<form id="putDuck" method="PUT" action="/api">
+			<label>Select comment to edit</label>
+			<select id="put" name="EditList">
+			</select>
+			<label>new duck name:<input name="DuckName"/><label>
+			<label>new duck comment:<input name="DuckComment"/>
+			<input type="submit">
+		</form>
+
+		<p>DELETE Endpoint</p>
+		<form id="deleteDuck" method="DELETE" action="/api">
+			<label>Select comment to delete</label>
+			<select id="delete" name="DeleteList">
+			</select>
+			<input type="submit">
 		</form>
 	
 	</div>
+<script>
+document.getElementById("postDuck").addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch("/api", {
+    method: "POST",
+    body: new URLSearchParams(new FormData(e.target))
+  }).then(res => res.json()).then(json => `<option value="${json.DuckName}"> ${json.DuckName} : ${json.DuckComment}</option>`).then(els => document.getElementById("putDuck").innerHTML += els).then(another => document.getElementById("deleteDuck").innerHTML += another)
+
+});
+
+</script>
 </body>
+</html>
