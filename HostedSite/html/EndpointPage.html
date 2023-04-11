@@ -22,40 +22,120 @@
                 </form>
 
 		<p>POST Endpoint</p>
-		<form id="postDuck" method="POST" action="/api">
+		<form id="postDuck"  action="/api">
 			<label>duck name:<input name="DuckName"/></label>
 			<label>duck comment:<input name="DuckComment"/></label>
 			<input type="submit"/>
 		</form>
 		
 		<p>PUT Endpoint</p>
-		<form id="putDuck" method="PUT" action="/api">
+		<form id="putDuck"  action="/api">
 			<label>Select comment to edit</label>
-			<select id="put" name="EditList">
+			<select id="put" name="cid">
 			</select>
-			<label>new duck name:<input name="DuckName"/><label>
-			<label>new duck comment:<input name="DuckComment"/>
-			<input type="submit">
+			<label>new duck name:<input name="DuckName"/></label>
+			<label>new duck comment:<input name="DuckComment"</label>
+			<input type="submit" value="put"/>
 		</form>
 
 		<p>DELETE Endpoint</p>
-		<form id="deleteDuck" method="DELETE" action="/api">
+		<form id="deleteDuck"  action="/api">
 			<label>Select comment to delete</label>
-			<select id="delete" name="DeleteList">
+			<select id="delete" name="cid">
 			</select>
-			<input type="submit">
+			<input type="submit" value="delete"/>
 		</form>
+	<p>Hey TA the default username and password for now is user:ducky and pass:duckduckquack</p>
 	
 	</div>
 <script>
-document.getElementById("postDuck").addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch("/api", {
-    method: "POST",
-    body: new URLSearchParams(new FormData(e.target))
-  }).then(res => res.json()).then(json => `<option value="${json.DuckName}"> ${json.DuckName} : ${json.DuckComment}</option>`).then(els => document.getElementById("putDuck").innerHTML += els).then(another => document.getElementById("deleteDuck").innerHTML += another)
+//yet again I am up to absolutely no good, third times the charm ig
 
-});
+const createComment = ({DuckName, DuckComment, cid}) => {
+	const newComment = document.createElement("option")
+	newComment.value = cid;
+	newComment.innerHTML = `${cid} : ${DuckName} : ${DuckComment}`
+	return newComment;
+}
+
+const updatePut = () => fetch("/api").then(r => r.json()).then(json => json.map(createComment)).then(comments => document.getElementById("put").replaceChildren(...comments))
+const updateDelete = () => fetch("/api").then(r => r.json()).then(json => json.map(createComment)).then(comments => document.getElementById("delete").replaceChildren(...comments))
+//post
+document.getElementById("postDuck").addEventListener("submit", (e) => {
+	e.preventDefault();
+	fetch("/api", {
+	"method": "POST",
+	"headers": {
+	"Content-Type": "application/x-www-form-urlencoded",
+	},
+	"body": new URLSearchParams(new FormData(document.getElementById("postDuck")))
+	}).then(updatePut).then(updateDelete)
+})
+
+//put
+document.getElementById("putDuck").addEventListener("submit", (e) => {
+	e.preventDefault();
+	fetch("/api", {
+	"method": "PUT",
+	"headers": {
+	"Content-Type": "application/x-www-form-urlencoded",
+	},
+	"body": new URLSearchParams(new FormData(document.getElementById("putDuck")))
+	}).then(updatePut).then(updateDelete)
+})
+
+//delete
+document.getElementById("deleteDuck").addEventListener("submit", (e) => {
+	e.preventDefault();
+	fetch("/api", {
+	"method": "DELETE",
+	"headers": {
+	"Content-Type": "application/x-www-form-urlencoded",
+	},
+	"body": new URLSearchParams(new FormData(document.getElementById("deleteDuck")))
+	}).then(updatePut).then(updateDelete)
+})
+
+window.addEventListener("load", updatePut)
+window.addEventListener("load", updateDelete)
+
+
+/*
+const createComment = ({DuckName, DuckComment, id}) => {
+	const newComment = document.createElement("option")
+	newComment.value = id;
+	newComment.innerHTML = `${DuckName} : ${DuckComment}`
+	return newComment;
+}
+
+const updateComments = () => fetch("/api").then(r => r.json()).then(json => json.map(createComment)).then(comments => document.getElementById("put").replaceChildren(...comments))
+
+
+const newComment = (name, comment) => fetch("/api", {
+	method: "POST",
+	body: JSON.stringify({name, comment})
+}).then(updateComments)
+
+
+const updateComment = (DuckName, DuckComment, id) => fetch("/api", {
+	method: "PUT", 
+	body: JSON.stringify({DuckName, DuckComment, id}) 
+}).then(updateComments)
+
+const deleteComment = (commentID) => fetch('/api/${commentID}', {method: "DELETE"}).then(updateComments)
+
+window.addEventListener("load", updateComments);
+
+
+document.getElementById("postDuck").addEventListener("submit", (e) => {
+	e.preventDefault();
+	const newComment = (name, comment) => fetch("/api", {
+	method: "POST",
+	body: JSON.stringify({name, comment})
+	}).then(updateComments)
+	updateComments();
+})
+*/
 
 </script>
 </body>
