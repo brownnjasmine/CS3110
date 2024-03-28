@@ -1,3 +1,2 @@
-# CS3110
-Website work for my Programming the Mobile Web Class
-This is a website that hosts all of my resume information. TODO includes adding a picture, making a stylesheet for print, making it look decent
+# Silly Duck Website for CS3110 - Programming the Mobile Web
+A sandbox website used for learning various concepts such as RESTful actions, Web page design, Polling, and hosting a web server via AWS. Themed around silly duck pictures.
